@@ -1,3 +1,15 @@
+# Program : wordle_solver
+# Author : Riley Snyder
+# Date : 15/06/2022
+# Description : This program will tell you all the possible words possible when playing the game wordle by Josh Wardle.
+# Each guess of a word will take the color of the tiles returned to you and then based on that input, return a list of
+# every word that can be made within those restrictions. The words and their frequencies are stored in the
+# word_frequencies.json file, and the return words are sorted so that the most common words will be first. The words
+# themselves are placed in a Trie data structure for fast traversal of the possible words. For example if we know the
+# word starts with a 'b', rather than trying every word and then seeing if it starts with a 'b', we go to the Node that
+# represents a word starting with 'b' and then can be certain that all children braching off from this Node will indeed
+# start with 'b'.
+
 import json
 
 
